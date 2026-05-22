@@ -92,7 +92,7 @@ export default function UploadPage() {
             onClick={() => handleAnalyze('relaxed')}
             disabled={loading}
           >
-            Load Subject A (Relaxed)
+            Load Subject A (Happy/Neutral)
           </button>
           <button 
             className="btn btn-secondary" 
@@ -100,7 +100,7 @@ export default function UploadPage() {
             disabled={loading}
             style={{ backgroundColor: 'var(--surface)', border: '1px solid var(--primary)' }}
           >
-            Load Subject B (Stressed)
+            Load Subject B (Fear/Anger)
           </button>
         </div>
       </div>

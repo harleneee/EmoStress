@@ -1,0 +1,46 @@
+              precision    recall  f1-score   support
+
+       anger     0.8176    0.7742    0.7953      1563
+     disgust     0.7854    0.8962    0.8371      1580
+        fear     0.7813    0.7954    0.7883      1559
+       happy     0.8523    0.7535    0.7999      1570
+     neutral     0.7958    0.8216    0.8085      1575
+         sad     0.8056    0.7865    0.7960      1560
+
+    accuracy                         0.8047      9407
+   macro avg     0.8063    0.8046    0.8042      9407
+weighted avg     0.8063    0.8047    0.8042      9407
+
+Accuracy: 0.8047
+Balanced Accuracy: 0.8046
+Macro F1: 0.8042
+Weighted F1: 0.8042
+
+Training Settings:
+Dataset: ECSMP
+Feature scope: HR + IBI only
+Task: Six-emotion recognition
+Emotion labels: anger, disgust, fear, happy, neutral, sad
+Stress mapping: happy->low, neutral->baseline, sad/disgust->medium, fear/anger->high
+Model type: bilstm_raw_sequence
+Split: sample
+Balance train: True
+Baseline calibration: True
+Window size: 120
+Step size: 15
+Tag offset: 1
+Sequence length: 120
+Test size: 0.2
+Random state: 42
+Rows: 47035
+Train rows: 37628
+Test rows: 9407
+Feature count: 243
+
+Extra Settings:
+deep_epochs_requested: 80
+best_epoch: 77
+batch_size: 128
+learning_rate: 0.001
+dropout: 0.3
+input_channels: 5

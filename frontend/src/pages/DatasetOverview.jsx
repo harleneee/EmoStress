@@ -12,8 +12,8 @@ export default function DatasetOverview() {
           <Database size={24} /> The ECSMP Dataset
         </h2>
         <p className="mb-4" style={{ lineHeight: '1.7' }}>
-          This project relies on the <strong>ECSMP (Emotion, Cognition, Sleep, and Multi-model Physiological Signals)</strong> dataset. 
-          The dataset was carefully collected from college students during emotion-induction experiments and sleep tracking. 
+          This project relies on the <strong>ECSMP (Emotion, Cognition, Sleep, and Multi-model Physiological Signals)</strong> dataset.
+          The dataset was carefully collected from college students during emotion-induction experiments and sleep tracking.
           By combining these diverse physiological markers, the dataset allows for highly contextual machine learning models.
         </p>
       </div>
@@ -66,7 +66,7 @@ export default function DatasetOverview() {
         <p className="mb-4" style={{ lineHeight: '1.7' }}>
           During the experiment, subjects were shown six emotion-inducing videos (Video1–Video6). The signal streams were segmented into equal parts and labeled according to the video order. The models were trained to detect these six distinct emotional states:
         </p>
-        
+
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem' }}>
           <span className="badge badge-low" style={{ fontSize: '1rem', padding: '0.5rem 1rem' }}>Neutral</span>
           <span className="badge badge-high" style={{ fontSize: '1rem', padding: '0.5rem 1rem' }}>Fear</span>

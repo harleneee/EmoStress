@@ -1,0 +1,28 @@
+              precision    recall  f1-score   support
+
+       anger     0.7500    0.6000    0.6667         5
+     disgust     1.0000    0.8000    0.8889         5
+        fear     1.0000    0.6000    0.7500         5
+       happy     1.0000    1.0000    1.0000         5
+     neutral     0.7143    1.0000    0.8333         5
+         sad     0.7143    1.0000    0.8333         5
+
+    accuracy                         0.8333        30
+   macro avg     0.8631    0.8333    0.8287        30
+weighted avg     0.8631    0.8333    0.8287        30
+
+Accuracy: 0.8333
+
+Training Settings:
+Dataset: ECG and GSR Data for Emotion Recognition
+Feature scope: ECG extracted features + GSR extracted features
+Label source: Stimulus_Description target emotion: {label}
+Emotion set: six
+Minimum top emotion score: 2.0
+Minimum margin: 0.0
+Model type: extra_trees
+Split: group
+Balance train: oversample
+Test size: 0.2
+Random state: 42
+Feature count: 30

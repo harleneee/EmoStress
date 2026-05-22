@@ -1,0 +1,33 @@
+{
+    "data_dir": "ECG_GSR_Emotions",
+    "extracted_dir": "ECG_GSR_Emotions\\Extracted Features Supplementary Data",
+    "annotation_dir": "ECG_GSR_Emotions\\Self-Annotation Labels",
+    "annotation_file": "ECG_GSR_Emotions\\Self-Annotation Labels\\Self-annotation Multimodal.xlsx",
+    "stimulus_file": "ECG_GSR_Emotions\\Stimulus_Description.xlsx",
+    "label_source": "stimulus",
+    "ecg_feature_files": 154,
+    "gsr_feature_files": 252,
+    "matching_ecg_gsr_pairs": 147,
+    "usable_rows": 126,
+    "skipped_no_label": 21,
+    "skipped_bad_feature": 0,
+    "ecg_featnames_file": "ECG_GSR_Emotions\\Extracted Features Supplementary Data\\ECG_FeatNames.mat",
+    "gsr_featnames_file": "ECG_GSR_Emotions\\Extracted Features Supplementary Data\\GSR_Feat_Names.mat",
+    "ecg_feature_name_count": 20,
+    "gsr_feature_name_count": 10,
+    "first_ecg_feature_length": 20,
+    "first_gsr_feature_length": 10,
+    "ecg_duplicates": 0,
+    "gsr_duplicates": 0,
+    "annotation_columns": [
+        "session id",
+        "video id",
+        "target emotion",
+        "title of video clip",
+        "time duration (secs)",
+        "active link of video"
+    ],
+    "emotion_columns_detected": {
+        "target_emotion": "target emotion"
+    }
+}
