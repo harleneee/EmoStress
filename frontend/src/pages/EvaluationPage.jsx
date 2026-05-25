@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Activity, HeartPulse, CheckCircle, ChevronDown, ChevronUp } from 'lucide-react';
 
-const BACKEND = 'http://localhost:8000';
+const BACKEND = 'https://emostress.onrender.com';
 
 export default function EvaluationPage() {
   const [showEcgMatrix, setShowEcgMatrix] = useState(true);
