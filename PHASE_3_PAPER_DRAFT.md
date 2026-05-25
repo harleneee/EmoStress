@@ -18,8 +18,8 @@ The prototype was engineered using a robust stack of industry-standard Python li
 
 ### Model Accuracy and Implementation
 The prototype integrates two specific models:
-1. **ECG and GSR Classifier (Primary):** Reached **83.33% accuracy**. It utilizes 30 specific waveform features. The system defaults to this model whenever ECG data is detected, as electrical cardiac activity provides the highest fidelity for emotion mapping.
-2. **HR and IBI Classifier (Secondary):** Reached **82.15% accuracy**. Utilizing an expansive 243-feature extraction pipeline, this model serves as a highly robust alternative when users only possess standard smartwatch data (Heart Rate and Inter-Beat Intervals).
+1. **ECG and GSR Classifier (Primary):** Reached **83.33% accuracy**. It utilizes 30 specific waveform features extracted from the *ECG and GSR Data for Emotion Recognition* dataset. The system defaults to this model whenever ECG data is detected, as electrical cardiac activity provides the highest fidelity for emotion mapping.
+2. **HR and IBI Classifier (Secondary):** Reached **82.15% accuracy**. Trained on the *ECSMP: A Dataset on Emotion, Cognition, Sleep, and Multi-modal Physiological Signals*, this model utilizes an expansive 243-feature extraction pipeline. It serves as a highly robust alternative when users only possess standard smartwatch data (Heart Rate and Inter-Beat Intervals).
 
 *(Instructor Note: Insert screenshots of the EmoStress React UI here showing the Dashboard and Upload screens. You should also insert the classification report texts and the confusion matrix images from your `backend/evaluation` folder to visually prove these accuracies).*
 

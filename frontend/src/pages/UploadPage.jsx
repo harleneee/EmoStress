@@ -47,7 +47,7 @@ export default function UploadPage() {
     }
 
     try {
-      const response = await fetch('http://localhost:8000/predict', {
+      const response = await fetch('https://emostress.onrender.com/predict', {
         method: 'POST',
         body: formData
       });
@@ -157,7 +157,7 @@ export default function UploadPage() {
         <button 
           className="btn btn-primary" 
           onClick={() => handleAnalyze()}
-          disabled={loading || (!files.hr && !files.ibi)}
+          disabled={loading || (!files.hr || !files.ibi)}
           style={{ fontSize: '1.1rem', padding: '1rem 2rem' }}
         >
           {loading ? (
@@ -166,8 +166,8 @@ export default function UploadPage() {
             <><Upload size={20} /> Analyze Custom Data</>
           )}
         </button>
-        {(!files.hr && !files.ibi) && (
-          <p className="text-muted mt-2" style={{ fontSize: '0.875rem' }}>Upload at least HR or IBI data to analyze.</p>
+        {(!files.hr || !files.ibi) && (
+          <p className="text-muted mt-2" style={{ fontSize: '0.875rem' }}>Upload both HR and IBI data to analyze.</p>
         )}
       </div>
     </div>
