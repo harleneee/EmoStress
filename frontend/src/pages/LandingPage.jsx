@@ -6,32 +6,24 @@ export default function LandingPage() {
   return (
     <div style={{ paddingBottom: '4rem' }}>
       {/* Hero Section */}
-      <div 
-        className="card" 
-        style={{ 
-          background: 'linear-gradient(135deg, var(--primary-light) 0%, var(--surface) 100%)',
-          border: '1px solid var(--primary-light)',
-          padding: '4rem 2rem',
-          textAlign: 'center',
-          marginBottom: '3rem'
-        }}
-      >
-        <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '1.5rem' }}>
-          <div style={{ background: 'var(--primary)', padding: '1rem', borderRadius: '50%', color: 'white', boxShadow: 'var(--shadow-md)' }}>
-            <Brain size={48} />
+      <div className="card hero-card" style={{ padding: '5rem 2rem', textAlign: 'center', marginBottom: '4rem' }}>
+        <div className="hero-glow"></div>
+        <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '1.5rem', position: 'relative', zIndex: 1 }}>
+          <div style={{ background: 'linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%)', padding: '1.25rem', borderRadius: '50%', color: 'white', boxShadow: 'var(--shadow-glow)' }}>
+            <Brain size={56} />
           </div>
         </div>
-        <h1 style={{ fontSize: '3rem', fontWeight: 800, color: 'var(--text-main)', marginBottom: '1rem', letterSpacing: '-0.025em' }}>
+        <h1 style={{ fontSize: '3.5rem', fontWeight: 800, color: 'var(--text-main)', marginBottom: '1.25rem', letterSpacing: '-0.03em', position: 'relative', zIndex: 1 }}>
           Decoding Stress Through Physiology
         </h1>
-        <p style={{ fontSize: '1.25rem', color: 'var(--text-muted)', maxWidth: '800px', margin: '0 auto 2.5rem', lineHeight: '1.6' }}>
+        <p style={{ fontSize: '1.25rem', color: 'var(--text-muted)', maxWidth: '800px', margin: '0 auto 3rem', lineHeight: '1.7', position: 'relative', zIndex: 1 }}>
           EmoStress is an advanced academic research prototype that utilizes machine learning to detect emotional states and estimate stress levels in college students using multimodal physiological signals.
         </p>
-        <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center' }}>
-          <Link to="/upload" className="btn btn-primary" style={{ padding: '1rem 2rem', fontSize: '1.1rem' }}>
+        <div style={{ display: 'flex', gap: '1.25rem', justifyContent: 'center', position: 'relative', zIndex: 1 }}>
+          <Link to="/upload" className="btn btn-primary" style={{ padding: '1.1rem 2.5rem', fontSize: '1.1rem' }}>
             Start Analysis <ArrowRight size={20} />
           </Link>
-          <Link to="/dataset" className="btn btn-secondary" style={{ padding: '1rem 2rem', fontSize: '1.1rem', backgroundColor: 'white' }}>
+          <Link to="/dataset" className="btn btn-secondary" style={{ padding: '1.1rem 2.5rem', fontSize: '1.1rem' }}>
             Learn About the Dataset
           </Link>
         </div>
@@ -39,38 +31,38 @@ export default function LandingPage() {
 
       {/* Features Section */}
       <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
-        <h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: '0.5rem' }}>Multimodal Signal Processing</h2>
-        <p className="text-muted" style={{ maxWidth: '600px', margin: '0 auto' }}>
+        <h2 style={{ fontSize: '2.25rem', fontWeight: 800, marginBottom: '0.75rem', letterSpacing: '-0.02em' }}>Multimodal Signal Processing</h2>
+        <p className="text-muted" style={{ maxWidth: '600px', margin: '0 auto', fontSize: '1.1rem' }}>
           Our Random Forest models analyze high-fidelity data streams to ensure accurate emotion classification.
         </p>
       </div>
 
       <div className="grid-3 mb-8">
-        <div className="card" style={{ textAlign: 'center', transition: 'transform 0.2s', cursor: 'default' }} onMouseOver={e => e.currentTarget.style.transform = 'translateY(-5px)'} onMouseOut={e => e.currentTarget.style.transform = 'translateY(0)'}>
-          <div style={{ color: 'var(--primary)', marginBottom: '1rem', display: 'flex', justifyContent: 'center' }}>
-            <Activity size={40} />
+        <div className="card" style={{ textAlign: 'center' }}>
+          <div style={{ color: 'var(--primary)', marginBottom: '1.25rem', display: 'flex', justifyContent: 'center' }}>
+            <Activity size={48} />
           </div>
-          <h3 style={{ marginBottom: '1rem' }}>Electrocardiogram (ECG)</h3>
+          <h3 style={{ marginBottom: '1rem', fontSize: '1.25rem' }}>Electrocardiogram (ECG)</h3>
           <p className="text-muted" style={{ fontSize: '0.95rem', lineHeight: '1.6' }}>
             Extracts complex cardiac features from both emotion-induction experiments and baseline sleep tracking to map the autonomic nervous system.
           </p>
         </div>
 
-        <div className="card" style={{ textAlign: 'center', transition: 'transform 0.2s', cursor: 'default' }} onMouseOver={e => e.currentTarget.style.transform = 'translateY(-5px)'} onMouseOut={e => e.currentTarget.style.transform = 'translateY(0)'}>
-          <div style={{ color: 'var(--secondary)', marginBottom: '1rem', display: 'flex', justifyContent: 'center' }}>
-            <HeartPulse size={40} />
+        <div className="card" style={{ textAlign: 'center' }}>
+          <div style={{ color: 'var(--secondary)', marginBottom: '1.25rem', display: 'flex', justifyContent: 'center' }}>
+            <HeartPulse size={48} />
           </div>
-          <h3 style={{ marginBottom: '1rem' }}>Heart Rate (HR)</h3>
+          <h3 style={{ marginBottom: '1rem', fontSize: '1.25rem' }}>Heart Rate (HR)</h3>
           <p className="text-muted" style={{ fontSize: '0.95rem', lineHeight: '1.6' }}>
             Utilizes PPG-derived continuous heart rate data from the Empatica E4 wearable to monitor real-time cardiovascular arousal.
           </p>
         </div>
 
-        <div className="card" style={{ textAlign: 'center', transition: 'transform 0.2s', cursor: 'default' }} onMouseOver={e => e.currentTarget.style.transform = 'translateY(-5px)'} onMouseOut={e => e.currentTarget.style.transform = 'translateY(0)'}>
-          <div style={{ color: 'var(--primary)', marginBottom: '1rem', display: 'flex', justifyContent: 'center' }}>
-            <Activity size={40} />
+        <div className="card" style={{ textAlign: 'center' }}>
+          <div style={{ color: 'var(--primary)', marginBottom: '1.25rem', display: 'flex', justifyContent: 'center' }}>
+            <Activity size={48} />
           </div>
-          <h3 style={{ marginBottom: '1rem' }}>Inter-Beat Interval (IBI)</h3>
+          <h3 style={{ marginBottom: '1rem', fontSize: '1.25rem' }}>Inter-Beat Interval (IBI)</h3>
           <p className="text-muted" style={{ fontSize: '0.95rem', lineHeight: '1.6' }}>
             Measures the precise time between consecutive heartbeats to calculate Heart Rate Variability (HRV), a critical biomarker for psychological stress.
           </p>

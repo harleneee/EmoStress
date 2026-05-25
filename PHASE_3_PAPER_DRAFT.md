@@ -23,6 +23,44 @@ The prototype integrates two specific models:
 
 *(Instructor Note: Insert screenshots of the EmoStress React UI here showing the Dashboard and Upload screens. You should also insert the classification report texts and the confusion matrix images from your `backend/evaluation` folder to visually prove these accuracies).*
 
+### Website Interface & Navigation Tutorial
+
+To make the complex physiological emotion models accessible and interpretable, a full-stack web application was developed using React (Vite) for the frontend, communicating seamlessly with the Python FastAPI backend. This intuitive UI allows researchers to upload physiological datasets and instantly visualize emotional stress predictions without needing coding expertise.
+
+Below is a breakdown of the core application pages and a tutorial on navigating the interface:
+
+#### 1. Home
+The landing page introduces the EmoStress system and its capabilities. It explains the multimodal physiological approach (ECG, HR, IBI) and provides direct calls to action to either begin an analysis or read about the underlying datasets.
+*(Insert Screenshot of Home Page Here)*
+
+#### 2. Dataset Info
+This page provides researchers with critical context regarding the datasets used to train the machine learning models. It outlines the differences between the ECG + GSR model and the HR + IBI (ECSMP) model, detailing how features are extracted from raw physiological signals.
+*(Insert Screenshot of Dataset Info Page Here)*
+
+#### 3. Input & Analyze
+This is the core functional page where users interact directly with the Python backend. Users can upload standard CSV files containing their physiological data (e.g., HR.csv, IBI.csv, or ECG.csv). Once files are dragged and dropped into the upload zone, the user clicks the "Analyze" button, which transmits the data to the backend for real-time feature extraction and Extra Trees model classification.
+*(Insert Screenshot of Input & Analyze Page Here)*
+
+#### 4. Analysis Dashboard
+After a successful analysis, the user is redirected to the Dashboard. This page presents a high-level, easily readable summary of the physiological state. It highlights the primary detected emotion (e.g., "Happy", "Fear") and its corresponding downstream estimated stress level (e.g., "Low", "High"), color-coded for quick interpretation.
+*(Insert Screenshot of Analysis Dashboard Here)*
+
+#### 5. Emotion Results
+This page provides a deep dive into the specific emotional prediction. It explains which of the six emotional classes (anger, disgust, fear, happy, neutral, sad) was detected by the algorithm and details the physiological rationale—such as heart rate variability patterns—that triggered this specific classification.
+*(Insert Screenshot of Emotion Results Page Here)*
+
+#### 6. Classification Logic
+To maintain algorithmic transparency, this page explains how the EmoStress system maps psychological emotion directly to physiological stress. It acts as a reference guide, showing exactly why an emotion like "Disgust" is classified as "High" stress, while "Happy" is classified as "Low" stress.
+*(Insert Screenshot of Classification Logic Page Here)*
+
+#### 7. Model Evaluation
+This technical page displays the raw performance metrics of the trained models. It surfaces the classification reports and confusion matrices generated during the initial machine learning training phase, proving the system's accuracy to the user.
+*(Insert Screenshot of Model Evaluation Page Here)*
+
+#### 8. Generate Report
+This final step allows users to export their analysis session. By clicking the download button, the system generates a downloadable text summary containing the inputted file types, the detected emotion, the estimated stress level, and the specific model utilized for the prediction.
+*(Insert Screenshot of Generate Report Page Here)*
+
 ---
 
 ## Impact & Discussion

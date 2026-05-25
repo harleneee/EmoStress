@@ -29,50 +29,52 @@ function App() {
             </div>
             
             <nav>
-              <NavLink to="/" className={({isActive}) => isActive ? "nav-link active" : "nav-link"} end>
+              <NavLink to="/" className={({isActive}) => isActive ? "nav-item active" : "nav-item"} end>
                 <Activity size={20} /> Home
               </NavLink>
-              <NavLink to="/dataset" className={({isActive}) => isActive ? "nav-link active" : "nav-link"}>
+              <NavLink to="/dataset" className={({isActive}) => isActive ? "nav-item active" : "nav-item"}>
                 <FileText size={20} /> Dataset Info
               </NavLink>
-              <NavLink to="/upload" className={({isActive}) => isActive ? "nav-link active" : "nav-link"}>
+              <NavLink to="/upload" className={({isActive}) => isActive ? "nav-item active" : "nav-item"}>
                 <Upload size={20} /> Input & Analyze
               </NavLink>
-              <NavLink to="/dashboard" className={({isActive}) => isActive ? "nav-link active" : "nav-link"}>
-                <BarChart2 size={20} /> Dashboard
+              <NavLink to="/dashboard" className={({isActive}) => isActive ? "nav-item active" : "nav-item"}>
+                <BarChart2 size={20} /> Analysis Dashboard
               </NavLink>
-              <NavLink to="/emotions" className={({isActive}) => isActive ? "nav-link active" : "nav-link"}>
+              <NavLink to="/emotions" className={({isActive}) => isActive ? "nav-item active" : "nav-item"}>
                 <Heart size={20} /> Emotion Results
               </NavLink>
-              <NavLink to="/logic" className={({isActive}) => isActive ? "nav-link active" : "nav-link"}>
-                <Brain size={20} /> Stress Logic
+              <NavLink to="/logic" className={({isActive}) => isActive ? "nav-item active" : "nav-item"}>
+                <Brain size={20} /> Classification Logic
               </NavLink>
-              <NavLink to="/evaluation" className={({isActive}) => isActive ? "nav-link active" : "nav-link"}>
+              <NavLink to="/evaluation" className={({isActive}) => isActive ? "nav-item active" : "nav-item"}>
                 <ImageIcon size={20} /> Model Evaluation
               </NavLink>
-              <NavLink to="/report" className={({isActive}) => isActive ? "nav-link active" : "nav-link"}>
+              <NavLink to="/report" className={({isActive}) => isActive ? "nav-item active" : "nav-item"}>
                 <FileText size={20} /> Generate Report
               </NavLink>
             </nav>
 
-            <div className="disclaimer" style={{ marginTop: 'auto', fontSize: '11px', textAlign: 'left', lineHeight: '1.4' }}>
-              <strong>Important Disclaimer:</strong><br/>
+            <div className="disclaimer">
+              <strong>Important Disclaimer:</strong>
               This system is developed for Empathic Computing academic research purposes only. The stress and emotion results are based on experimental physiological signal patterns and should not be used as medical or psychological diagnosis.
             </div>
           </aside>
 
           <main className="main-content">
-            <Routes>
-              <Route path="/" element={<LandingPage />} />
-              <Route path="/dataset" element={<DatasetOverview />} />
-              <Route path="/upload" element={<UploadPage />} />
-              <Route path="/dashboard" element={<Dashboard />} />
-              <Route path="/emotions" element={<EmotionResults />} />
-              <Route path="/logic" element={<StressLogic />} />
-              <Route path="/evaluation" element={<EvaluationPage />} />
-              <Route path="/profile" element={<ProfilePage />} />
-              <Route path="/report" element={<ReportPage />} />
-            </Routes>
+            <div className="content-wrapper">
+              <Routes>
+                <Route path="/" element={<LandingPage />} />
+                <Route path="/dataset" element={<DatasetOverview />} />
+                <Route path="/upload" element={<UploadPage />} />
+                <Route path="/dashboard" element={<Dashboard />} />
+                <Route path="/emotions" element={<EmotionResults />} />
+                <Route path="/logic" element={<StressLogic />} />
+                <Route path="/evaluation" element={<EvaluationPage />} />
+                <Route path="/profile" element={<ProfilePage />} />
+                <Route path="/report" element={<ReportPage />} />
+              </Routes>
+            </div>
           </main>
         </div>
       </Router>
